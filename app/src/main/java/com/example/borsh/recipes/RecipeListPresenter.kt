@@ -25,7 +25,7 @@ class RecipeListPresenter {
 
                 override fun onResponse(call: Call<RecipeResponse>, response: Response<RecipeResponse>) {
                     val recipes = response.body()?.content
-                   // val id = response.body()?.content?.map { it.id }
+                    //val from = response.body()?.content?.map { it.from.name}
 
                    // Log.i("ID = ", id.toString())
                     Log.i("Recipes = ", recipes.toString())
@@ -36,7 +36,6 @@ class RecipeListPresenter {
                     }
                 }
             })
-         //view?.showRecipe((1..100).map { "Recipe $it" })
     }
 
     fun unbindView(){

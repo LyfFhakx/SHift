@@ -25,7 +25,7 @@ class FridgeListPresenter {
                 }
 
                 override fun onResponse(call: Call<IngredientResponse>, response: Response<IngredientResponse>) {
-                    val ingredients = response.body()?.content?.fridge?.map { it.ingredient.name }
+                    val ingredients = response.body()?.content?.fridge
 
                     Log.i("Ingredients = ", ingredients.toString())
                     Log.i("STATUS = ", response.code().toString())

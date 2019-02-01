@@ -1,10 +1,8 @@
 package com.example.borsh.addrecipe
 
-import android.util.Log
 import com.example.borsh.App
 import com.example.borsh.models.response.AllIngredientResponse
 import com.example.borsh.models.response.contentrecipe.IngredientObj
-import com.example.borsh.models.response.fridge.IngredientResponse
 import com.example.borsh.models.response.recipes.Recipe
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,6 +33,20 @@ class AddRecipePresenter {
                     if (ingredients != null)
                         view?.showIngredients(ingredients)
                 }
+            })
+    }
+
+     fun createRecipe(){
+        App.api
+            .addRecipe(recipe.name, recipe.ingredient)
+            .enqueue(object : Callback<IngredientObj>{
+                override fun onFailure(call: Call<IngredientObj>, t: Throwable) {
+                }
+
+                override fun onResponse(call: Call<IngredientObj>, response: Response<IngredientObj>) {
+
+                }
+
             })
     }
 

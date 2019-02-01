@@ -42,6 +42,9 @@ class AddRecipeActivity : AppCompatActivity(), AddRecipeView {
             presenter.createReceipt(listOf(
                 spinner1.selectedItem as String
             ))
+
+            presenter.createRecipe()
+            finish()
         }
 
     }
@@ -61,6 +64,4 @@ class AddRecipeActivity : AppCompatActivity(), AddRecipeView {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner1.adapter = adapter
     }
-
-
 }

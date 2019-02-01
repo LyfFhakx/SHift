@@ -5,4 +5,11 @@
             android:id="@+id/fridge"
             android:title="Холодильник"
             app:showAsAction="never"/>
+    <item
+            android:id="@+id/action_search"
+            android:icon="@drawable/ic_launcher_background"
+            android:orderInCategory="100"
+            android:title="Search..."
+            app:showAsAction="ifRoom"
+            app:actionViewClass="android.support.v7.widget.SearchView" />
 </menu>

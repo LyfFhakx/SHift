@@ -23,6 +23,22 @@
             android:textSize="18sp"
             android:text="@string/some_ingregient"/>
 
+        <TextView
+                android:id="@+id/ingredient_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/some_ingregient"/>
+
+        <TextView
+                android:id="@+id/ingredient_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/some_ingregient"/>
+
     </LinearLayout>
 
 

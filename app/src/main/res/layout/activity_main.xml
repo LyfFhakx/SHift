@@ -10,6 +10,7 @@
     <include android:id="@+id/toolbar"
              layout="@layout/bar_item"/>
 
+
     <Button
             android:id="@+id/add_recipe"
             android:layout_height="wrap_content"

@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.widget.Toast
 import com.example.borsh.R
+import com.example.borsh.models.response.fridge.Foo
 
 class FridgeActivity : AppCompatActivity(), FridgeView {
 
@@ -40,7 +41,7 @@ class FridgeActivity : AppCompatActivity(), FridgeView {
         presenter.unbindView()
     }
 
-    override fun showFridge(ingredients: List<String>) {
+    override fun showFridge(ingredients: List<Foo>) {
         adapter.setIngredient(ingredients)
     }
 
