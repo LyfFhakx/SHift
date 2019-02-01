@@ -22,6 +22,27 @@
                 android:textSize="18sp"
                 android:text="Some Recipe"/>
 
+        <TextView
+                android:id="@+id/title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Some Recipe"/>
+
+        <TextView
+                android:id="@+id/title_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="Some Recipe"/>
+
+        <CheckBox
+                android:id="@+id/recipe_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 

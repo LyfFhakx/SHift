@@ -3,6 +3,7 @@ package com.example.borsh.addrecipe
 import com.example.borsh.App
 import com.example.borsh.models.request.NewRecipeRequest
 import com.example.borsh.models.response.AllIngredientResponse
+import com.example.borsh.models.response.contentrecipe.IngredientObj
 import com.example.borsh.models.response.SuccessPostResponse
 import com.example.borsh.models.response.fridge.Ingredient
 import com.example.borsh.models.response.recipes.Recipe
@@ -36,6 +37,20 @@ class AddRecipePresenter {
                     if (ingredients != null)
                         view?.showIngredients(ingredients)
                 }
+            })
+    }
+
+     fun createRecipe(){
+        App.api
+            .addRecipe(recipe.name, recipe.ingredient)
+            .enqueue(object : Callback<IngredientObj>{
+                override fun onFailure(call: Call<IngredientObj>, t: Throwable) {
+                }
+
+                override fun onResponse(call: Call<IngredientObj>, response: Response<IngredientObj>) {
+
+                }
+
             })
     }
 

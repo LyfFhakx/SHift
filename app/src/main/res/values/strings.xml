@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="some_ingregient">Some Ingregient</string>
     <string name="add_recipe">Add Recipe</string>
+    <string name="search_here">Search here</string>
 </resources>

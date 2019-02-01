@@ -1,3 +1,5 @@
 package com.example.borsh.models.response.recipes
 
-class RecipeResponse(val content: List<Recipe>)
+import com.example.borsh.models.response.AddRecipe
+
+class RecipeResponse(val content: List<AddRecipe>)

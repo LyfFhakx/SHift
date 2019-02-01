@@ -33,6 +33,9 @@ class AddRecipeActivity : AppCompatActivity(), AddRecipeView {
                 listOf(
                 spinner1.selectedItem as Ingredient
             ))
+
+            presenter.createRecipe()
+            finish()
         }
 
     }
