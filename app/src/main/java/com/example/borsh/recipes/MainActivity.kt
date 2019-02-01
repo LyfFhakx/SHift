@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.SearchView
@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity(), RecipeView {
        // search = findViewById(R.id.search)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_recipe)
-        //recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
@@ -104,8 +103,7 @@ class MainActivity : AppCompatActivity(), RecipeView {
             }
         }
         return false
-    }
-
+      
     override fun onBackPressed() {
         // close search view on back button pressed
         if (!searchView!!.isIconified) {
@@ -114,8 +112,5 @@ class MainActivity : AppCompatActivity(), RecipeView {
         }
         super.onBackPressed()
     }
-
-
-
 
 }

@@ -1,3 +1,13 @@
 package com.example.borsh.models.response.fridge
 
-class Ingredient (val name: String, val unit: String)
+import com.google.gson.annotations.SerializedName
+
+class Ingredient (
+
+    @SerializedName("_id") val id: String,
+    @SerializedName( "name") val name: String,
+    @SerializedName("unit") val unit: String
+) {
+
+   override fun toString(): String = name
+}

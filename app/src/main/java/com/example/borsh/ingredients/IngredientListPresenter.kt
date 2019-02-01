@@ -38,7 +38,6 @@ class IngredientListPresenter {
                         view?.showIngredient(ingredients)
                     }
                 }
-
             })
     }
 

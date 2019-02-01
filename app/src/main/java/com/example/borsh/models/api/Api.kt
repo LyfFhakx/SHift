@@ -1,8 +1,12 @@
 package com.example.borsh.models.api
 
-import com.example.borsh.models.request.SelectedIngredient
-import com.example.borsh.models.response.AllIngredientResponse
 import com.example.borsh.models.response.contentrecipe.*
+import com.example.borsh.models.request.NewRecipeRequest
+import com.example.borsh.models.response.AllIngredientResponse
+import com.example.borsh.models.response.SuccessPostResponse
+import com.example.borsh.models.response.contentrecipe.BaseResponse
+import com.example.borsh.models.response.contentrecipe.ContentRecipe
+import com.example.borsh.models.request.SelectedIngredient
 import com.example.borsh.models.response.fridge.IngredientResponse
 import com.example.borsh.models.response.recipes.RecipeResponse
 import retrofit2.Call
@@ -27,7 +31,6 @@ interface Api {
 
     @PUT("/recipe/{id}")
     fun changeStatus(@Path("id") id: String, @Body selectedIngredient: SelectedIngredient): Call<BaseResponse<ContentRecipe>>
-}
-
-
-
+  
+    @POST("/recipe/")
+    fun postNewRecipe(@Body  newRecipeRequest: NewRecipeRequest):Call<SuccessPostResponse>
